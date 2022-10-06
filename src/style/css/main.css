@@ -1,0 +1,48 @@
+/* mixin usage */
+/*--------------------------------
+	Responsive ratio
+	Used for creating scalable elements that maintain the same ratio
+	example:
+	.element {
+		@include responsive-ratio(400, 300);
+	}
+*/
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+}
+
+.row {
+  padding: 40px;
+}
+@media (min-width: 768px) {
+  .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+.row .col {
+  padding: 0 15px 30px;
+}
+@media (min-width: 768px) {
+  .row .col {
+    width: 50%;
+  }
+}
+@media (min-width: 1024px) {
+  .row .col {
+    width: 33.3333333333%;
+  }
+}
+
+.text-holder {
+  border: 1px solid;
+  padding: 15px;
+}
